@@ -17,11 +17,15 @@
   right:0;
   background-image: url("./assets/bg.jpg");
   background-size: 100% 100%;
+  direction: rtl;
 }
 
 #logos{
   position: fixed;
   bottom: 0%;
-  left:-1%;
-}
+  left:0%;
+  height: 8%;
+  width:42%;
+  margin:1%;
+  }
 </style>
