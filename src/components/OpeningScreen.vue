@@ -4,36 +4,11 @@
             <br>
             חיל הגנת הגבולות
         </div>
-        <p>{{ openings.opening }}</p>
-        <a href="#" @click.prevent="scrollToBottom">{{ openings.link }}</a>
-        <div class="texts">{{ openings.importance.join('\n') }}</div>
-        <div class="texts">{{ openings.forChail.join('\n') }}</div>
-        <div class="texts">{{ openings.forMefaked.join('\n') }}</div>
-        <h2>מבנה אימון</h2>
-        <p>{{ openings.workoutOpening }}</p>
-        <div class="texts">{{ openings.warmup.join('\n') }}
-            <span v-show="wurm">{{ openings.chimumShichrur[0] }}</span>
-            <br v-show="wurm">
-            <span @click="toggleWURM" class="readMore"> {{ wurmText }}</span>
-        </div>
-        <p>{{ openings.woMain }}</p>
-        <p>{{ openings.sikum }}
-            <span v-show="srm">{{ openings.chimumShichrur[1] }}</span>
-            <br v-show="srm">
-            <span @click="toggleSRM" class="readMore"> {{ srmText }}</span></p>
-        <h2>גיוון האימונים</h2>
-        <p>{{ openings.givunP }}</p>
-        <ul>
-            <li v-for="(item , index) in openings.givunList" :key="index">{{ item }}</li>
-        </ul>
-        <h2>סופר סט</h2>
-        <ul>
-            <li v-for="(item , index) in openings.superSet" :key="index">{{ item }}</li>
-        </ul>
-        <!--all of the text-->
+        
+        <h2>{{ openings.opening }}</h2>
         <p>{{ openings.btnsMsg }}</p>
         <div class="btns-container">
-            <button v-for="(btn , index) in openings.btns" :key="index" @click="goTo(index)" class="btn">{{ btn }}</button>
+            <button v-for="(btn , index) in openings.btns" :key="index" @click="goTo(index)" class="my-btn">{{ btn }}</button>
         </div>
         
     </div>
@@ -45,8 +20,6 @@ export default {
     data(){
         return{
             openings,
-            wurm : false,
-            srm : false,
         }
     },
     methods : {
@@ -57,33 +30,21 @@ export default {
             }
         } ,
         goTo(index) {
-            
+            switch(index){
+                case(0) :
+                    this.$router.push('general') ;
+                    break ;
+                case(1) :
+                    this.$router.push('workout-types') ;
+                    break ;
+                default :
+                    this.$router.push('workouts') ;
+                    break ;
+            }
         },
-        toggleWURM(){
-            if(this.wurm){
-                this.wurm = false
-            }
-            else{
-                this.wurm = true;
-            }
-        },
-        toggleSRM(){
-            if(this.srm){
-                this.srm = false
-            }
-            else{
-                this.srm = true;
-            }
-        }
+
     },
-    computed : {
-        wurmText(){
-            if(this.wurm){return "סגור"} else{return "קרא עוד..."}
-        },
-        srmText(){
-            if(this.srm){return "סגור"} else{return "קרא עוד..."}
-        }
-    }
+
 }
 </script>
 
@@ -99,7 +60,7 @@ export default {
 }
 
 #opening-screen{
-    height: 90%;
+    height: 95%;
     width:100vw;
     position: relative;
     left: 8.5%;
@@ -141,14 +102,18 @@ p{
 
 .btns-container{
     display: flex;
+    position: relative;
+    right:0%;
     flex-flow: column nowrap;
 }
 
-.btn{
+.my-btn{
     background-color:#fdff85;
-    margin: 3%;
+    margin-bottom: 2%;
     font-size: 1.5rem;
     border-radius: 20px;
+    width:96%;
+    margin-right: 1%;
 }
 
 .texts{
@@ -162,12 +127,9 @@ p{
 h2{
     font-size: 1.5rem;
     font-family: "titles" !important;
+    padding: .5rem;
 }
 
-.readMore{
-    opacity:0.7;
-    text-decoration: underline;
-}
 
 li{
     /* width:90%; */

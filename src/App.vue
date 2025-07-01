@@ -12,7 +12,7 @@
 #app{
   position: fixed;
   width: 100%;
-  height: 93%;
+  height: 100%;
   top:0;
   right:0;
   background-image: url("./assets/bg.jpg");
