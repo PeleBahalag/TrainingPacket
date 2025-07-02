@@ -69,6 +69,7 @@
             <li v-for="(item , index) in openings.superSet" :key="index">{{ item }}</li>
         </ul>
         <h2>הוראות בטיחות</h2>
+        <a href="https://mecachtzar.azurewebsites.net/ammoLibrary">לאפליקציית k-click</a>
         <p>{{ openings.timeGaps }}</p>
         <ul>
             <li v-for="(item , index) in openings.tgList" :key="index">{{ item }}</li>
@@ -77,7 +78,9 @@
         <ul>
             <li v-for="(item , index) in openings.chipukList" :key="index">{{ item }}</li>
         </ul>
-        <a href="">טבלאות עומס חום וקור<br></a>
+        <h2>קרב מגע</h2>
+        <p>{{ openings.kamag.join('\n') }}</p>
+        <a href="https://drive.google.com/file/d/1EZ7YSqsBO53Gah92NPhR_BYupsbsy8ax/view?usp=sharing">טבלאות עומס חום וקור<br></a>
         <a href="">תוצאות כש"ג<br></a>
         <div id="navs" @click="rth">
             <img src="../assets/return.png" id="nav">
