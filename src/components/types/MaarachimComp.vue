@@ -96,16 +96,6 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-    font-family: "titles";
-    src: url("../assets/fonts/titles.ttf");
-}
-
-@font-face {
-    font-family: "text";
-    src: url("../assets/fonts/text.ttf");
-}
-
 #maarachim{
     height: 95%;
     width:100vw;

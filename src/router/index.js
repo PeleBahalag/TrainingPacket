@@ -18,7 +18,7 @@ const routes = [
     {path : '/maarachim' , component : MaarachimComp},
     {path : '/cashag' , component: CashagImprove},
     {path : '/nutrition' , component : NutritionComp},
-    {path: '/phsiyo' , component : PhisyoTherapy},
+    {path: '/phisyo' , component : PhisyoTherapy},
     {path : '/kamag' , component : KravMaga}
 ]
 
