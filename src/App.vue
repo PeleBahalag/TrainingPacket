@@ -1,4 +1,10 @@
-<script setup>
+<script>
+  export default{
+    mounted(){
+      console.log('Router base:', import.meta.env.BASE_URL)
+      console.log('Current path:', window.location.pathname)
+    }
+  }
 </script>
 
 <template>
