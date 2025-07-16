@@ -1,8 +1,7 @@
 <template>
     <div id="opening-screen" ref="scrollContainer">
-        <div class="banner">חוברת אימונים
-            <br>
-            חיל הגנת הגבולות
+        <div class="banner">   חוברת כושר <br>
+                גופני למפקד
         </div>
         
         <h2>{{ openings.opening }}</h2>
@@ -32,11 +31,13 @@ export default {
         goTo(index) {
             switch(index){
                 case(0) :
-                    this.$router.push('general') ;
+                    this.$router.push('speach') ;
                     break ;
                 case(1) :
-                    this.$router.push('workout-types') ;
+                    this.$router.push('general') ;
                     break ;
+                case(2) : 
+                    this.$router.push('workout-types')
                 default :
                     this.$router.push('workouts') ;
                     break ;
@@ -63,7 +64,7 @@ export default {
     height: 95%;
     width:100vw;
     position: relative;
-    left: 8.5%;
+    left:9.7%;
     top: -3%;
     font-family: "text";
     color: white;
@@ -73,16 +74,17 @@ export default {
 .banner{
     height: 10%;
     width:90%;
+    right:0;
     background-image: url("../assets/banner.png");
     background-size: cover;
     font-family: "titles" !important;
     position:relative;
-    right:0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: right;
     padding: 3%;
+    padding-right: 2%;
     font-size: 1.3rem;
     color: #2f2f2f;
     text-shadow: white 2px 2px 2px;
@@ -113,7 +115,8 @@ p{
     font-size: 1.5rem;
     border-radius: 20px;
     width:96%;
-    margin-right: 1%;
+    margin-right: 2%;
+    color:#2f2f2f;
 }
 
 .texts{

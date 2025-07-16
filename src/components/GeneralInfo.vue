@@ -6,17 +6,6 @@
             <p>לפניכם מידע בנושאים שונים, בחרו אחד כדי להתחיל. ניתן לחזור לתפריט זה בצד שמאל למטה</p>
             <button v-for="(item , index) in subjects" :key="index" @click="display=item.id" class="my-btn">{{ item.text }}</button>
         </div>
-        <div v-if="display === 'opening'">
-            <h2>פתח דבר</h2>
-            <div class="texts">{{ openings.importance.join('\n') }}</div>
-            <div class="texts">{{ openings.forChail.join('\n') }}</div>
-            <div class="texts">{{ openings.forMefaked.join('\n') }}</div>
-            <p>
-                פה עבורכם לכל התייעצות או שאלה- שני ברט קאגית גדוד הפיקוד <br>
-0546663235
-
-            </p>
-        </div>
         <div v-if="display === 'structure'">
             <h2>מבנה אימון</h2>
             <div class="accordion" id="accordionExample">
@@ -118,7 +107,7 @@
                 <li v-for="(item , index) in types.nutriList" :key="index">{{ item }}</li>
             </ul>
             <div id="navs" @click="goBack">
-                <img src="../../assets/return.png" id="nav">
+                <img src="../assets/return.png" id="nav">
                 <p>חזרה לתפריט</p>
             </div>
         </div>
@@ -157,7 +146,6 @@ export default {
             types,
             display : 'menu',
             subjects : [
-                { id : "opening" , text:"פתיחה"},
                 { id :"structure" , text : "מבנה אימון"} ,
                 { id :"safety" , text : "הוראות בטיחות"} ,
                 { id : "nutrition" , text: "תזונה"} ,
@@ -235,6 +223,7 @@ export default {
     font-size: 1.3rem;
     color: #2f2f2f;
     text-shadow: white 2px 2px 2px;
+    padding-right:0 ;
 }
 
 a{
@@ -257,8 +246,10 @@ p{
 .my-btn{
     background-color:#fdff85;
     margin: 3%;
+    margin-left: 5%;
     font-size: 1.5rem;
     border-radius: 20px;
+    color:#2f2f2f;
 }
 
 .texts{

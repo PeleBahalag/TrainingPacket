@@ -147,6 +147,7 @@ export default {
     font-size: 1.3rem;
     color: #2f2f2f;
     text-shadow: white 2px 2px 2px;
+    padding-right:0 ;
 }
 
 .btns-container{
@@ -162,7 +163,8 @@ export default {
     font-size: 1.5rem;
     border-radius: 20px;
     width:96%;
-    margin-right: 1%;
+    /* margin-right: 1%; */
+    color:#2f2f2f;
 }
 .texts{
     white-space: pre-line;

@@ -2,11 +2,16 @@
     <div id="workouts">
         <div class="banner">אימונים
         </div>
-        <div class="btns-container">
-            <button v-for="(item , index) in btns" :key="index" class="my-btn"
-            @click="go(item.id)"
-            >{{ item.text }}</button>
+        <div v-if="!isInSub">
+            <p>לפניכם אימונים שונים למצבים וזמינויות ציוד שונים. תמיד ניתן לחזור לכאן</p>
+            <div class="btns-container">
+                <button v-for="(item , index) in btns" :key="index" class="my-btn"
+                @click="go(item.id)"
+                >{{ item.text }}</button>
+            </div>
         </div>
+        <router-view></router-view>
+        
     </div>
 </template>
 
@@ -15,12 +20,24 @@ export default {
     data() {
         return{
             btns : [
-                { id : "runs" , text : "ריצות"} ,
-                { id : "pack2" , text : "מארז 2"} , 
-                { id : "pack3" , text : "מארז 3"} ,
-                { id : "wilderness" , text : "שטח"} ,
+                { id : "demos" , text : "הדגמות תרגילים" },
+                { id : "running" , text : "ריצות"} ,
+                { id : "2" , text : "מארז 2"} , 
+                { id : "3" , text : "מארז 3"} ,
+                { id : "shetach" , text : "שטח"} ,
                 { id: "shorts" , text : "פק''לים קצרים"}
             ],
+        }
+    },
+    computed : {
+        isInSub(){
+            return this.$route.path.includes('running') || this.$route.path.includes('shorts') || this.$route.path.includes('shetach') ||
+            this.$route.path.includes('2') || this.$route.path.includes('3') || this.$route.path.includes('demos')
+        }
+    },
+    methods : {
+        go(id){
+            this.$router.push(id);
         }
     }
 }
@@ -54,6 +71,7 @@ export default {
     font-size: 1.3rem;
     color: #2f2f2f;
     text-shadow: white 2px 2px 2px;
+    padding-right:0 ;
 }
 
 .btns-container{
@@ -70,6 +88,7 @@ export default {
     border-radius: 20px;
     width:96%;
     margin-right: 1%;
+    color:#2f2f2f;
 }
 .texts{
     white-space: pre-line;
