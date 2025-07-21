@@ -11,6 +11,7 @@
   <div id="app">
     <router-view></router-view>
     <img id="logos" src="./assets/logos.png">
+    <img id="pikud" src="./assets/pikud.png">
   </div>
 </template>
 
@@ -30,8 +31,16 @@
   position: fixed;
   bottom: 0%;
   left:0%;
-  height: 8%;
+  height: 7.8%;
   width:42%;
   margin:1%;
   }
+
+#pikud{
+  height:8%;
+  width:17%;
+  position: absolute;
+  left:4%;
+  top:1%;
+}
 </style>

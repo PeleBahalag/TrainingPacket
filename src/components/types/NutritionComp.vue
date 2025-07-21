@@ -7,6 +7,7 @@
         <ul>
             <li v-for="(item , index) in types.nutriList" :key="index">{{ item }}</li>
         </ul>
+        <img src="../../assets/tzuna.jpg" id="infopic">
         <div id="navs" @click="goBack">
             <img src="../../assets/return.png" id="nav">
             <p>חזרה לתפריט</p>
@@ -54,7 +55,7 @@ export default {
 
 .banner{
     height: 10%;
-    width:90%;
+    width:70%;
     background-image: url("../../assets/banner.png");
     background-size: cover;
     font-family: "titles" !important;
@@ -122,6 +123,13 @@ h3{
 li{
     /* width:90%; */
     text-align: right;
+}
+
+#infopic{
+    width: 95%;
+    position: relative;
+    right:50%;
+    transform: translateX(50%);
 }
 
 #navs{

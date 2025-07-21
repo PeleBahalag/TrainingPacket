@@ -10,12 +10,17 @@
             <p>
                 פה עבורכם לכל התייעצות או שאלה- שני ברט קאגית גדוד הפיקוד <br>
 0546663235
-
             </p>
+            <h2>דבר רע"ן כושר קרבי זרוע היבשה סא"ל הילה חשאי</h2>
+            <p v-for="(para , index) in openings.raan" :key="index">
+                {{ para.join('\n') }}
+            </p>
+            <h2>דבר מג"ד גדוד הפיקוד סא"ל עמיחי הוד:</h2>
+            <p>{{ openings.magad.join('\n') }}</p>
         </div>
         <div id="navs" @click="rth">
             <img src="../assets/return.png" id="nav">
-            <p>חזרה לבית</p>
+            <p>חזרה</p>
         </div>
     </div>
 </template>
@@ -60,7 +65,7 @@ export default {
 
 .banner{
     height: 10%;
-    width:90%;
+    width:70%;
     background-image: url("../assets/banner.png");
     background-size: cover;
     font-family: "titles" !important;

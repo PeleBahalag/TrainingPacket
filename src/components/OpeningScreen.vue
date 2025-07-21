@@ -73,7 +73,7 @@ export default {
 
 .banner{
     height: 10%;
-    width:90%;
+    width:70%;
     right:0;
     background-image: url("../assets/banner.png");
     background-size: cover;
