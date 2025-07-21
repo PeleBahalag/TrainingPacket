@@ -16,6 +16,7 @@
         <ul>
             <li v-for="(item , index) in types.recs" :key="index">{{ item }}</li>
         </ul>
+        <a href="https://drive.google.com/file/d/1KP88jvOu94ElRTXXhIlIGJAzSTr5Rye7/view?usp=sharing">פרוטוקולים</a>
         <div id="navs" @click="goBack">
             <img src="../../assets/return.png" id="nav">
             <p>חזרה לתפריט</p>

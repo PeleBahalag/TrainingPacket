@@ -94,10 +94,12 @@
             <ul>
                 <li v-for="(item , index) in types.commonInjuries" :key="index">{{ item }}</li>
             </ul>
+            <a href="https://drive.google.com/file/d/1KP88jvOu94ElRTXXhIlIGJAzSTr5Rye7/view?usp=sharing">פרוטוקולים</a>
             <h2>המלצות נוספות למפקדים</h2>
             <ul>
                 <li v-for="(item , index) in types.recs" :key="index">{{ item }}</li>
             </ul>
+            
             <img src="../assets/pakalonPhisyo.jpg" class="res">
         </div>
         <div v-if="display === 'nutrition'">
@@ -126,6 +128,7 @@
             <ul>
                 <li v-for="(item , index) in types.alts" :key="index">{{ item }}</li>
             </ul>
+            
             <img src="../assets/cashagres.jpg" class="res">
         </div>
         
