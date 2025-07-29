@@ -144,7 +144,7 @@ export default {
     justify-content: center;
     text-align: right;
     padding: 3%;
-    font-size: 1.3rem;
+    font-size: 1.05rem;
     color: #2f2f2f;
     text-shadow: white 2px 2px 2px;
     padding-right:0 ;

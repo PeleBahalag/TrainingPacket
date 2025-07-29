@@ -31,9 +31,10 @@
   position: fixed;
   bottom: 0%;
   left:0%;
-  height: 7.8%;
-  width:42%;
+  height: 7%;
+  width:37.5%;
   margin:1%;
+  z-index: 13;
   }
 
 #pikud{

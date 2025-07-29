@@ -5,7 +5,15 @@
         </div>
         
         <h2>{{ openings.opening }}</h2>
-        <p>{{ openings.btnsMsg }}</p>
+        <!-- <p id="instruct">גללו לסוף העמוד כדי להגיע לנושאים!</p> -->
+        <div class="texts">{{ openings.importance.join('\n') }}</div>
+            <!-- <div class="texts">{{ openings.forChail.join('\n') }}</div> -->
+            <div class="texts">{{ openings.forMefaked.join('\n') }}</div>
+            <p>
+                פה עבורכם לכל התייעצות או שאלה- שני ברט קאגית גדוד הפיקוד <br>
+0546663235
+            </p>
+        <!-- <p>{{ openings.btnsMsg }}</p> -->
         <div class="btns-container">
             <button v-for="(btn , index) in openings.btns" :key="index" @click="goTo(index)" class="my-btn">{{ btn }}</button>
         </div>
@@ -31,13 +39,11 @@ export default {
         goTo(index) {
             switch(index){
                 case(0) :
-                    this.$router.push('speach') ;
-                    break ;
-                case(1) :
                     this.$router.push('general') ;
                     break ;
-                case(2) : 
-                    this.$router.push('workout-types')
+                case(1) : 
+                    this.$router.push('workout-types');
+                    break;
                 default :
                     this.$router.push('workouts') ;
                     break ;
@@ -137,5 +143,18 @@ h2{
 li{
     /* width:90%; */
     text-align: right;
+}
+
+#instruct{
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0%{
+        text-shadow:1px 1px 10px #ffffff3e, 1px 1px 10px #cccccc8f;
+    }
+    100%{
+        text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+    }
 }
 </style>

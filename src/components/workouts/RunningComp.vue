@@ -10,7 +10,9 @@
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-
+              <ul>
+                <li v-for="(item , index) in workouts.spreadSequence" :key="index">{{ item }}</li>
+              </ul>
           </div>
         </div>
       </div>
@@ -22,7 +24,9 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-
+              <ul>
+                <li v-for="(item , index) in workouts.medStatSequence" :key="index">{{ item }}</li>
+              </ul>
             </div>
           </div>
       </div>
@@ -34,6 +38,9 @@
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
+            <ul>
+                <li v-for="(item , index) in workouts.changingSeqOne" :key="index">{{ item }}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -45,6 +52,9 @@
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
+            <ul>
+                <li v-for="(item , index) in workouts.changingSeqTwo" :key="index">{{ item }}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -169,5 +179,7 @@ h2{
     background-color: #c4c468;
 }
 
-
+li{
+  text-align: right;
+}
 </style>
