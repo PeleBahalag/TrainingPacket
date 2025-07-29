@@ -43,5 +43,6 @@
   position: absolute;
   left:4%;
   top:1%;
+  z-index: 900;
 }
 </style>

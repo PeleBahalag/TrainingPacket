@@ -4,11 +4,6 @@ import WorkoutSubjects from '../components/WorkoutSubjects.vue'
 import WorkoutTypes from '../components/WorkoutTypes.vue'
 import ExerciseDemos from '../components/ExerciseDemos.vue'
 import GeneralInfo from '../components/GeneralInfo.vue'
-import MaarachimComp from '../components/types/maarachimComp.vue'
-import CashagImprove from '../components/types/CashagImprove.vue'
-import NutritionComp from '../components/types/NutritionComp.vue'
-import PhisyoTherapy from '../components/types/PhisyoTherapy.vue'
-import KravMaga from '../components/types/KravMaga.vue'
 import RunningComp from '../components/workouts/RunningComp.vue'
 import SecondPack from '../components/workouts/SecondPack.vue'
 import ThirdPack from '../components/workouts/ThirdPack.vue'
@@ -30,11 +25,6 @@ const routes = [
         { path : '/shorts' , component : ShortsComp }
       ]
     },
-    {path : '/maarachim' , component : MaarachimComp},
-    {path : '/cashag' , component: CashagImprove},
-    {path : '/nutrition' , component : NutritionComp},
-    {path: '/phisyo' , component : PhisyoTherapy},
-    {path : '/kamag' , component : KravMaga},
     {path : '/speach' , component : SpeachComp}
 ]
 
