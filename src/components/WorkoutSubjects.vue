@@ -9,6 +9,10 @@
                 @click="go(item.id)"
                 >{{ item.text }}</button>
             </div>
+            <div id="navs" @click="rth">
+                <img src="../assets//return.png" id="nav">
+                <p>חזרה</p>
+            </div>
         </div>
         <router-view></router-view>
         
@@ -38,6 +42,9 @@ export default {
     methods : {
         go(id){
             this.$router.push(id);
+        },
+        rth(){
+            this.$router.push("/")
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="running">
+  <div id="second">
     <h2>אימוני מארז 2</h2>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
@@ -206,17 +206,21 @@ export default {
 </script>
 
 <style>
-td , th{
-  border-width: 2px;
-  border-style: solid;
-  border-color:#2f2f2f;
-}
 
+
+tbody, td, tfoot, th, thead, tr {
+  border: black 2px solid !important;
+}
 table{
   position: relative;
   right:-5%;
   padding: 0;
   margin:0;
+ 
+}
+
+th{
+  font-weight: bold;
 }
 
 td li{
@@ -227,6 +231,7 @@ td li{
 
 th{
   font-size: 0.8rem;
+  font-weight: bold;
 }
 
 #navs{
