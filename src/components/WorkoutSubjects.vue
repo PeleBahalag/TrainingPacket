@@ -36,7 +36,8 @@ export default {
     computed : {
         isInSub(){
             return this.$route.path.includes('running') || this.$route.path.includes('shorts') || this.$route.path.includes('shetach') ||
-            this.$route.path.includes('2') || this.$route.path.includes('3') || this.$route.path.includes('demos')
+            this.$route.path.includes('2') || this.$route.path.includes('3') || this.$route.path.includes('demos') || this.$route.path.includes('pull') ||
+            this.$route.path.includes('push') || this.$route.path.includes('legs')
         }
     },
     methods : {
