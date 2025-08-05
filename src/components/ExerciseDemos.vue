@@ -40,7 +40,6 @@ export default {
             this.$router.push("/"+name)
         },
         rth(){
-            console.log('happening')
             if(!this.isInSub){
                 this.$router.push('/workouts')
             }
