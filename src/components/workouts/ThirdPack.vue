@@ -42,11 +42,11 @@
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <p v-for="(item, index) in workouts.auditoriumThree.slice(0,4)" :key="index">{{ item }}</p>
+            <p v-for="(item, index) in workouts.auditoriumFour.slice(0,4)" :key="index">{{ item }}</p>
               <ul>
-                <li v-for="(item , index) in workouts.auditoriumThree.slice(4,14)" :key="index">{{ item }}</li>
+                <li v-for="(item , index) in workouts.auditoriumFour.slice(4,14)" :key="index">{{ item }}</li>
               </ul>
-              <p>{{ workouts.auditoriumThree[14] }}</p>
+              <p>{{ workouts.auditoriumFour[14] }}</p>
           </div>
         </div>
       </div>
