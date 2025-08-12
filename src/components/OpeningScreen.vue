@@ -115,13 +115,15 @@ p{
 }
 
 .my-btn{
+    all:unset;
     background-color:#fdff85;
-    margin-bottom: 2%;
+    margin: 3%;
     font-size: 1.5rem;
     border-radius: 20px;
-    width:96%;
-    margin-right: 2%;
     color:#2f2f2f;
+    right:0;
+    padding: 4%;
+    text-align: center;
 }
 
 .texts{

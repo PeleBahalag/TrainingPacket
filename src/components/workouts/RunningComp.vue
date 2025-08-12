@@ -238,7 +238,7 @@ li{
     width:70%;
     position: fixed;
     right:3%;
-    bottom: 3%;
+    bottom: 1%;
     display: flex;
     flex-flow: row nowrap;
     color : #fdff85;
