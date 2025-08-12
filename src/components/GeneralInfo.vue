@@ -5,6 +5,7 @@
         <div v-if="display === 'menu'" class="btns-container">
             <p>לפניכם מידע בנושאים שונים, בחרו אחד כדי להתחיל. ניתן לחזור לתפריט זה בצד שמאל למטה</p>
             <button v-for="(item , index) in subjects" :key="index" @click="display=item.id" class="my-btn">{{ item.text }}</button>
+            <button @click="this.$router.push('nituachIsuk')" class="my-btn">ניתוח עיסוק</button>
         </div>
         <div v-if="display === 'structure'">
             <h2>מבנה אימון</h2>
@@ -108,6 +109,7 @@
             <ul>
                 <li v-for="(item , index) in types.nutriList" :key="index">{{ item }}</li>
             </ul>
+            <img src="../assets/graphics/tzuna.jpg" class="res"/>
             <div id="navs" @click="goBack">
                 <img src="../assets/return.png" id="nav">
                 <p>חזרה לתפריט</p>
@@ -129,7 +131,8 @@
                 <li v-for="(item , index) in types.alts" :key="index">{{ item }}</li>
             </ul>
             
-            <img src="../assets/cashagres.jpg" class="res">
+            <img src="../assets/graphics/tests.jpg" class="res">
+            <img src="../assets/graphics/metach.jpg" class="res"/>
         </div>
         
         <div id="navs" @click="rth">
@@ -153,8 +156,9 @@ export default {
                 { id :"safety" , text : "הוראות בטיחות"} ,
                 { id : "nutrition" , text: "תזונה"} ,
                 { id : "phisyo" , text : "פיזיותרפיה ומניעת פציעות"} ,
-                { id : "improve" , text : "שיפור כש''ג"}
-            ]
+                { id : "improve" , text : "שיפור כש''ג"},
+                
+            ],
 
         }
     },
@@ -173,7 +177,7 @@ export default {
                 this.display = 'menu'
             }
             
-        }
+        },
     },
     computed : {
         rthText(){
@@ -183,6 +187,14 @@ export default {
             else{
                 return "חזרה לתפריט"
             }
+        },
+    },
+    mounted(){
+        //I named it first visit stupidly even though when its true it signifies that its NOT the first visit but... too late i guess
+        //basically what it does is: if its the first visit, redirects to ניתוח עיסוק and forces them to read it
+        const firstVisit = localStorage.getItem('firstVisit');
+        if(!firstVisit){
+            this.$router.push('nituachIsuk')
         }
     }
 }
@@ -203,8 +215,6 @@ export default {
     height: 95%;
     width:100vw;
     position: relative;
-    left: 8.5%;
-    top: -3%;
     font-family: "text";
     color: white;
     overflow: auto;
@@ -247,12 +257,15 @@ p{
 }
 
 .my-btn{
+    all:unset;
     background-color:#fdff85;
     margin: 3%;
-    margin-left: 5%;
     font-size: 1.5rem;
     border-radius: 20px;
     color:#2f2f2f;
+    right:0;
+    padding: 4%;
+    text-align: center;
 }
 
 .texts{
@@ -309,7 +322,7 @@ li{
     width:70%;
     position: fixed;
     right:3%;
-    bottom: 3%;
+    bottom: 1%;
     display: flex;
     flex-flow: row nowrap;
     color : #fdff85;

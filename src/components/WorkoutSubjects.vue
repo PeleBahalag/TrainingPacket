@@ -56,8 +56,7 @@ export default {
     height: 95%;
     width:100vw;
     position: relative;
-    left: 8.5%;
-    top: -3%;
+
     font-family: "text";
     color: white;
     overflow: auto;
@@ -111,7 +110,7 @@ export default {
     width:70%;
     position: fixed;
     right:3%;
-    bottom: 3%;
+    bottom: 1%;
     display: flex;
     flex-flow: row nowrap;
     color : #fdff85;

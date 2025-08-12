@@ -70,8 +70,7 @@ export default {
     height: 95%;
     width:100vw;
     position: relative;
-    left:9.7%;
-    top: -3%;
+
     font-family: "text";
     color: white;
     overflow: auto;

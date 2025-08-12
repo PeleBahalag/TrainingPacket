@@ -13,6 +13,7 @@ import SpeachComp from '../components/SpeachComp.vue'
 import PushDay from '../components/workouts/PushDay.vue'
 import PullDay from '../components/workouts/PullDay.vue'
 import LegDay from '../components/workouts/LegDay.vue'
+import NituachIsuk from '../components/NituachIsuk.vue'
 
 const routes = [
     {path : '/' , component : OpeningScreen},
@@ -34,7 +35,8 @@ const routes = [
         { path : '/shorts' , component : ShortsComp }
       ]
     },
-    {path : '/speach' , component : SpeachComp}
+    {path : '/speach' , component : SpeachComp},
+    {path : '/nituachIsuk' , component : NituachIsuk}
 ]
 
 const router = createRouter({
