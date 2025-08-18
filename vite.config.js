@@ -4,6 +4,17 @@ import vue from '@vitejs/plugin-vue'
 // https://vite.dev/config/
 export default defineConfig({
   base :'/TrainingPacket/',
-  plugins: [vue()],
+  plugins: [vue(),
+    {
+      name: 'spa-fallback',
+      closeBundle() {
+        const distDir = resolve(__dirname, 'dist')
+        fs.copyFileSync(
+          resolve(distDir, 'index.html'),
+          resolve(distDir, '404.html')
+        )
+      }
+    }
+  ],
   
 })
