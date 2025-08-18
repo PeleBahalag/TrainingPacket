@@ -5,15 +5,12 @@
         </div>
         
         <h2>{{ openings.opening }}</h2>
-        <!-- <p id="instruct">גללו לסוף העמוד כדי להגיע לנושאים!</p> -->
-        <div class="texts">{{ openings.importance.join('\n') }}</div>
-            <!-- <div class="texts">{{ openings.forChail.join('\n') }}</div> -->
-            <div class="texts">{{ openings.forMefaked.join('\n') }}</div>
-            <p>
+        <div class="texts">{{ openings.pticha.join('\n') }}</div>
+            
+            <p id="contact">
                 פה עבורכם לכל התייעצות או שאלה- שני ברט קאגית גדוד הפיקוד <br>
 0546663235
             </p>
-        <!-- <p>{{ openings.btnsMsg }}</p> -->
         <div class="btns-container">
             <button v-for="(btn , index) in openings.btns" :key="index" @click="goTo(index)" class="my-btn">{{ btn }}</button>
         </div>
@@ -130,7 +127,7 @@ p{
     white-space: pre-line;
     font-size: 1.2rem;
     padding:2%;
-    line-height: 1;
+    line-height: 1.3;
     margin-bottom: 1rem;
 }
 
@@ -148,6 +145,10 @@ li{
 
 #instruct{
     animation: glow 2s ease-in-out infinite alternate;
+}
+
+#contact{
+    text-align: center;
 }
 
 @keyframes glow {

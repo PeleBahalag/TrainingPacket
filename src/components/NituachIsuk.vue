@@ -22,6 +22,8 @@
     <p>
         לוחמי חי"ר גבולות- מארז 3, מקטעים, עליות, קרב מגע וכוח מתפרץ.
     </p>
+    <img src="../assets/bniyatLochem.jpg" class="res"/>
+    <div class="buffer"></div>
     <button v-show="showNew" class="my-btn" @click="done">הבנתי,
         <br> אפשר להמשיך >>
     </button>
@@ -29,6 +31,7 @@
                 <img src="../assets/return.png" id="nav">
                 <p>חזרה</p>
     </div>
+    <div class="buffer"></div>
   </div>
 </template>
 
@@ -87,6 +90,10 @@ export default {
     font-weight: bold;
 }
 
+.buffer{
+    height:6vh;
+}
+
 .my-btn{
     background-color:#fdff85;
     margin-bottom: 2%;
@@ -96,5 +103,9 @@ export default {
     color:#2f2f2f;
     position: relative;
     right:57%;
+}
+
+.res{
+    width: 100%;
 }
 </style>

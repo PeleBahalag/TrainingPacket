@@ -32,6 +32,8 @@
                     <div class="accordion-body">
                         <p>{{ openings.warmup.join('\n') }}</p>
                         <p>{{ openings.chimumShichrur[0] }}</p>
+                        <a href="https://drive.google.com/file/d/1jh1bNpvxQqhUsOYRnOUUrgkY5U5NMeWT/view?usp=drive_link">חימום לאימון ריצה <br></a>
+                        <a href="https://drive.google.com/file/d/1j7977JPtVmbhPGFDap7oHa0BtNcdqVi8/view?usp=drive_link">חימום לאימון כוח</a>
                     </div>
                     </div>
                 </div>
@@ -57,6 +59,8 @@
                     <div class="accordion-body">
                         <p>{{ openings.sikum }}</p>
                         <p>{{ openings.chimumShichrur[1] }}</p>
+                        <a href="https://drive.google.com/file/d/1M6xbCRX0rrQ8sLkb4-umGZrjsbfYXG86/view?usp=drive_link">שחרור ומתיחות <br></a>
+                        <a href="https://drive.google.com/file/d/1fWGpFSm9fgL-tKj36QMxP_qbEnv86aoU/view?usp=drive_link">גמישות ומתיחות</a>
                     </div>
                     </div>
                 </div>
@@ -82,8 +86,6 @@
             <ul>
                 <li v-for="(item , index) in openings.chipukList" :key="index">{{ item }}</li>
             </ul>
-            <!-- <h2>קרב מגע</h2>
-            <p>{{ openings.kamag.join('\n') }}</p> -->
             <a href="https://drive.google.com/file/d/1EZ7YSqsBO53Gah92NPhR_BYupsbsy8ax/view?usp=sharing">טבלאות עומס חום וקור<br></a>
         </div>
         <div v-if="display === 'phisyo'">
@@ -133,6 +135,7 @@
             
             <img src="../assets/graphics/tests.jpg" class="res">
             <img src="../assets/graphics/metach.jpg" class="res"/>
+            <div class="buffer"></div>
         </div>
         
         <div id="navs" @click="rth">
@@ -342,6 +345,15 @@ li{
     }
 
 .res{
-    width: 90%;
+    width: 100%;
+}
+
+.buffer{
+    height:6vh;
+}
+a{
+    color : #9b9468;
+    text-decoration: underline;
+    font-size: 1.25rem;
 }
 </style>

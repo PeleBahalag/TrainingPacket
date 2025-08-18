@@ -4,10 +4,6 @@
             <br>
             הכושר הקרבי
         </div>
-        <!-- <p class="texts">בחרו נושא כדי לעיין</p>
-        <div class="btns-container">
-            <button v-for="(btn , index) in btns" :key="index" @click="goTo(index)" class="my-btn">{{ btn }}</button>
-        </div> -->
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
