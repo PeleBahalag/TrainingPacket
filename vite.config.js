@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { resolve } from 'node:path'
+import fs from 'node:fs'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -8,13 +10,12 @@ export default defineConfig({
     {
       name: 'spa-fallback',
       closeBundle() {
-        const distDir = resolve(__dirname, 'dist')
+        const distDir = resolve(process.cwd(), 'dist')
         fs.copyFileSync(
           resolve(distDir, 'index.html'),
           resolve(distDir, '404.html')
         )
       }
     }
-  ],
-  
+  ],  
 })
